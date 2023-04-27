@@ -28,27 +28,3 @@
     font-size: 26px;
     font-weight: 600;
   }
-.smile-list{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-.smile-item{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.smile-img{
-    width: 60px;
-}
-
-.result-body{
-    padding-top:20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
