@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {Header} from "./Header/Header"
+import { Sidebar } from './Sidebar/Sidebar';
+import {Smiles} from './Main/Smiles/Smiles';
+import { Todos } from './Main/Todos/Todos';
+import {Route, Routes, BrowserRouter} from "react-router-dom";
+import { Main } from './Main/Main';
+import { SendForm } from './Main/Formik/Formik';
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar/>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/smiles' element={<Smiles/>}/>
+        <Route path='/todos' element={<Todos/>}/>
+        <Route path='/formik' element={<SendForm/>}/>
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
