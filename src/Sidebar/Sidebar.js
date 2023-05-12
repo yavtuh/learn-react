@@ -20,6 +20,9 @@ return (
       <li>
         <NavLink  className={({ isActive }) => "link_name" + ( isActive ? ' active' : '')} to={'/formik'} >Formik</NavLink>
       </li>
+      <li>
+        <NavLink  className={({ isActive }) => "link_name" + ( isActive ? ' active' : '')} to={'/users'} >Users</NavLink>
+      </li>
     </ul>
 
   </div>
